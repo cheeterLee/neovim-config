@@ -53,3 +53,5 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.api.nvim_set_keymap('n', '<space>e', [[<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>]], { noremap = true, silent = true })
