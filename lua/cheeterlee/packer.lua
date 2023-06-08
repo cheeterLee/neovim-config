@@ -70,4 +70,9 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
     }
+
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
