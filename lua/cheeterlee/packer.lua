@@ -10,7 +10,10 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { { 'nvim-lua/plenary.nvim' } },
+        config = function()
+            require('telescope').load_extension('fzf')
+        end
     }
 
     use({
@@ -75,4 +78,6 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 end)
