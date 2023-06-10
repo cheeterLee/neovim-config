@@ -80,4 +80,8 @@ return require('packer').startup(function(use)
     }
 
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+    use('neovim/nvim-lspconfig')
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
 end)
