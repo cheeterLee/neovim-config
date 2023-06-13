@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -54,4 +54,7 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-vim.api.nvim_set_keymap('n', '<space>e', [[<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<space>e', [[<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>]],
+    { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<cr>", { noremap = true, silent = true  })

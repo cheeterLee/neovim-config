@@ -1,6 +1,16 @@
 require("cheeterlee.remap")
 require("cheeterlee.set")
 
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+
 local augroup = vim.api.nvim_create_augroup
 local CheeterLeeGroup = augroup('cheeterlee', {})
 
@@ -22,7 +32,7 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = CheeterLeeGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
