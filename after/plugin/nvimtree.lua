@@ -16,6 +16,10 @@ local function my_on_attach(bufnr)
 end
 
 require("nvim-tree").setup {
+    git = {
+        enable = true,
+        ignore = false
+    },
     ---
     on_attach = my_on_attach,
     ---

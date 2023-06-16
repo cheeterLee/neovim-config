@@ -84,7 +84,7 @@ return require('packer').startup(function(use)
 
     use {
         "windwp/nvim-ts-autotag",
-        config = function() require("nvim-ts-autotag").setup()  end
+        config = function() require("nvim-ts-autotag").setup() end
     }
 
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
