@@ -19,12 +19,21 @@ return require('packer').startup(function(use)
         end
     }
 
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
+    -- use({
+    --     "ellisonleao/gruvbox.nvim",
+    --     as = 'gruvbox',
+    --     config = function()
+    --          require('gruvbox').setup({ disable_italics = true })
+    --          vim.cmd('colorscheme gruvbox')
+    --     end
+    -- })
+
+    use ({
+        'rebelot/kanagawa.nvim',
+        as = 'kanagawa',
         config = function()
-            require('rose-pine').setup({ disable_italics = true })
-            vim.cmd('colorscheme rose-pine')
+            require('kanagawa').setup({ disable_italics = true })
+            vim.cmd('colorscheme kanagawa')
         end
     })
 
